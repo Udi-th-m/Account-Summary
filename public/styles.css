@@ -1,0 +1,70 @@
+:root{
+  --bg:#fafafa;
+  --card:#fff;
+  --primary:#0b1640;
+  --accent:#00a86b;
+  --muted:#999;
+  --sidebar:#fff;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; margin:0; background:var(--bg); color:#222;}
+
+.app{display:flex; min-height:100vh;}
+
+/* Sidebar */
+.sidebar{
+  width:220px;
+  background:linear-gradient(180deg,#fff,#fff);
+  border-right:1px solid #eee;
+  padding:28px 18px;
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{width:44px;height:44px;object-fit:contain}
+.brand-text{font-weight:700;color:#0b1640}
+.nav{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+.nav-item{padding:12px;border-radius:6px;color:#4b4b4b;text-decoration:none;display:flex;gap:8px;align-items:center}
+.nav-item.active{background:#071155;color:#fff}
+.nav-item.disabled{opacity:0.45}
+.logout{margin-top:auto;color:#606060}
+
+/* Main area */
+.main{flex:1;padding:28px 48px}
+.top-controls{display:flex;justify-content:flex-end;margin-bottom:20px}
+.selects{display:flex;gap:20px}
+.select-wrap select{
+  padding:12px 16px;border-radius:6px;border:1px solid #ddd;background:#fff;min-width:200px;
+}
+
+/* Content */
+.content{max-width:1100px;margin:0 auto}
+.balance-card{
+  display:flex;align-items:center;gap:18px;background:var(--card);
+  padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(12,20,40,0.06);
+  width:fit-content;margin-bottom:28px;
+}
+.balance-icon{width:56px;height:56px;border-radius:10px;background:#fbf4ee;display:flex;align-items:center;justify-content:center;font-size:26px}
+.balance-text .label{font-weight:700;color:#1a2666;font-size:20px}
+.amount{color:var(--accent);font-weight:700;margin-top:6px;font-size:18px}
+
+/* Table */
+.section-title{color:#636363;margin:8px 0 14px 0;font-weight:500}
+.table-wrap{background:transparent;border-radius:8px}
+.transactions{width:100%;border-collapse:collapse;background:#fff;border-radius:6px;overflow:hidden}
+.transactions thead tr{background:#f5f5f5}
+.transactions th{padding:18px;text-align:left;color:#555;font-weight:700}
+.transactions td{padding:18px;border-top:1px solid #efefef;color:#555}
+.transactions tbody tr td.muted{text-align:center;color:#9b9b9b;padding:36px}
+
+/* credit colored green */
+.credit{color:#00a86b;font-weight:600}
+
+@media (max-width:900px){
+  .sidebar{display:none}
+  .main{padding:18px}
+  .content{margin:0}
+  .selects{flex-direction:column;align-items:stretch}
+  .balance-card{width:100%}
+}

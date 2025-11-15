@@ -1,0 +1,100 @@
+{
+  "companies": [
+    {
+      "id": "comp1",
+      "name": "EazyPayouts Pvt Ltd",
+      "accounts": [
+        {
+          "id": "acc1",
+          "name": "Account 1",
+          "balance": 888888888,
+          "transactions": [
+            {
+              "date": "2024-07-05T13:04:00",
+              "credit": 21337,
+              "ac_balance": 21337,
+              "utr": "1000000",
+              "ac_no_upi": "AC0CF7RRUY407QHU"
+            },
+            {
+              "date": "2024-05-04T12:38:00",
+              "credit": 21337,
+              "ac_balance": 21337,
+              "utr": "CMS4136431811",
+              "ac_no_upi": "0104SLNEFTPL"
+            },
+            {
+              "date": "2024-03-28T17:09:00",
+              "credit": 21337,
+              "ac_balance": 21337,
+              "utr": "CMS4019645011",
+              "ac_no_upi": "ACT861VM9RR67Z5C"
+            }
+          ]
+        },
+        {
+          "id": "acc2",
+          "name": "Account 2",
+          "balance": 5015.69,
+          "transactions": [
+            {
+              "date": "2024-03-28T17:09:00",
+              "credit": 5015.69,
+              "ac_balance": 5015.69,
+              "utr": "CMS3956666735",
+              "ac_no_upi": "AC0CF7RRUY407QHU"
+            },
+            {
+              "date": "2024-03-19T23:33:00",
+              "credit": 5015.69,
+              "ac_balance": 5015.69,
+              "utr": "CMS3948064984",
+              "ac_no_upi": "ACT861VM9RR67Z5C"
+            },
+            {
+              "date": "2024-03-19T23:33:00",
+              "credit": 16000,
+              "ac_balance": 16000,
+              "utr": "CMS3938564916",
+              "ac_no_upi": "AC0CF7RRUY407QHU"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comp2",
+      "name": "GreenPayments Ltd",
+      "accounts": [
+        {
+          "id": "acc3",
+          "name": "Account A",
+          "balance": 125000,
+          "transactions": [
+            {
+              "date": "2024-06-01T10:00:00",
+              "credit": 50000,
+              "ac_balance": 125000,
+              "utr": "TRX1001",
+              "ac_no_upi": "UPI001"
+            }
+          ]
+        },
+        {
+          "id": "acc4",
+          "name": "Account B",
+          "balance": 45000.5,
+          "transactions": [
+            {
+              "date": "2024-05-20T09:15:00",
+              "credit": 25000.5,
+              "ac_balance": 45000.5,
+              "utr": "TRX2002",
+              "ac_no_upi": "UPI002"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
