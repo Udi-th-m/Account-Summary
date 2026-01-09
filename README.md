@@ -1,61 +1,57 @@
-# EazyPayouts Dashboard
+# EazyPayouts Dashboard (Assignment)
 
-This project is a simple dashboard built using HTML, CSS, and JavaScript. It loads companies, accounts, balances, and transactions from a MockAPI backend and displays them in a clean UI.
+This assignment is a single‑page dashboard that lists companies, accounts, balances, and transactions. The UI is built with plain HTML/CSS/JavaScript and pulls data from a MockAPI backend.
 
-## How to Run the Project
+## What Works
 
-This project uses a small Node.js server. Opening the HTML file directly will not work because `fetch()` requests must be served over HTTP.
+- Dashboard loads and renders data from the MockAPI endpoint
+- Company dropdown filters accounts for that company
+- Account dropdown shows transactions for the selected account
+- Balance card updates based on the current selection
+- Empty states display when no data is available
 
-Follow these steps:
+## What is out of the assignment's scope
 
-1. Install Node.js  
-   https://nodejs.org/
+- Sidebar items (Loads, Transactions, Statements) are static and do not navigate
+- Logout button is not wired to any action
+- The local API in `server.js` and `data.json` are not used by the frontend
+- `styles.css` exists but the page uses inline styles instead
 
-2. Open a terminal in the project directory  
-   Example:
-   ```
-   cd path/to/project
-   ```
+## How to Run
 
-3. Install dependencies  
-   If there is a `package.json` file in the project, run:
+You must serve the app over HTTP (opening the HTML file directly will block `fetch()` requests).
+
+1) Install dependencies:
    ```
    npm install
    ```
-
-4. Start the server  
+2) Start the server:
    ```
-   node server.js
+   npm start
    ```
-
-5. Open the application in the browser  
+3) Open the app:
    ```
    http://localhost:3000
    ```
 
-## API Used
+## Data Source
 
-Base URL:
+The frontend fetches data from:
 ```
 https://6916f911a7a34288a27f15b7.mockapi.io/eazypayouts/api/v1/balance
 ```
-
-Endpoints:
-```
-GET /companies
-GET /Account
-```
-
-The app loads all accounts on startup and displays their combined transactions by default.  
-Selecting a company filters accounts by `companyId`.  
-Selecting an account shows transactions for that account only.
+If that API is unavailable or blocked, the dashboard will not show data.
 
 ## Project Structure
 
 ```
-index.html        Main UI
-app.js            API calls and DOM rendering
-server.js         Lightweight Node server
-logo.png          Project logo
-README.md         Documentation
+public/index.html   Main UI
+public/app.js       API calls and DOM rendering
+public/styles.css   Unused stylesheet (styles are inline)
+server.js           Static server + local API (unused by frontend)
+data.json           Local data for the server API (unused by frontend)
 ```
+
+## Notes
+
+This is an assignment project meant for demonstration and learning purposes.
